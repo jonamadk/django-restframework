@@ -37,7 +37,7 @@ def article_detail(request, pk):
     
     elif request.method =='PUT':
        
-        serializer = ArticleSerializer(data=request.data)
+        serializer = ArticleSerializer(article,data=request.data)
 
         if serializer.is_valid():
             serializer.save()
