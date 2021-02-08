@@ -1,10 +1,10 @@
 
 
 from django.urls import path
-from api.views import article_list, article_detail
+from api.views import ArticleDetail, ArticleList
 
 urlpatterns = [
-    path('articles/', article_list),
-    path('article/<int:pk>/', article_detail)
+    path('articles/', ArticleList.as_view()),
+    path('article/<int:pk>/', ArticleDetail.as_view()),
 
 ]
